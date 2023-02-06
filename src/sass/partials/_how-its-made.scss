@@ -1,0 +1,244 @@
+.section {
+  padding-top: 125px;
+  padding-bottom: 39px;
+  background-color: $VBgColor;
+  line-height: 1.2;
+  margin: 0 auto;
+}
+
+.how-its-made {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--center {
+      align-items: center;
+    }
+  }
+
+  &__title {
+    color: $IVColor;
+    font-family: $fontSecondary;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: inherit;
+
+    &--ubig {
+      display: block;
+      color: $IIIColor;
+      font-size: 40px;
+      margin-top: 15px;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__cow {
+    max-height: 100%;
+  }
+
+  &__text-list {
+    display: flex;
+    flex-direction: column;
+    color: $IIColor;
+    font-family: $fontPrimary;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+    position: relative;
+    z-index: 99;
+    max-width: 220px;
+  }
+
+  &__text-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 23px;
+    transition: all 0.25s linear;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+
+    &--lower {
+      margin-bottom: 31px;
+    }
+
+    &--grey {
+      color: $textColor;
+      gap: 30px;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 130px;
+    padding-bottom: 66px;
+  }
+
+  .how-its-made {
+    &__container {
+      &--center {
+        align-items: center;
+      }
+    }
+
+    &__title {
+      font-size: 26px;
+      margin-bottom: 16px;
+
+      &--ubig {
+        font-size: 48px;
+        margin-top: 16px;
+        margin-bottom: 50px;
+      }
+    }
+
+    &__section {
+      align-items: flex-start;
+      flex-direction: row;
+      padding: 0 18px;
+      gap: 17px;
+    }
+
+    &__cow {
+      max-width: 340px;
+    }
+
+    &__text-list {
+      font-size: 14px;
+      line-height: 1.8;
+      padding-right: 0;
+      padding-top: 53px;
+      max-width: 340px;
+    }
+
+    &__text-item {
+      line-height: 1.8;
+      margin-bottom: 62px;
+
+      &--lower {
+        margin-bottom: 31px;
+      }
+
+      &--grey {
+        gap: 15px;
+      }
+    }
+
+    &__button {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    padding-top: 125px;
+    padding-bottom: 39px;
+  }
+
+  .how-its-made {
+    &__container {
+      &--center {
+        align-items: center;
+      }
+    }
+
+    &__title {
+      font-size: 30px;
+      margin-bottom: 15px;
+
+      &--ubig {
+        font-size: 58px;
+        margin-top: 15px;
+        margin-bottom: 55px;
+      }
+    }
+
+    &__section {
+      flex-direction: row;
+      padding: 0 107px;
+      gap: 74px;
+    }
+
+    &__cow {
+      max-width: 516px;
+    }
+
+    &__text-list {
+      font-size: 16px;
+      line-height: 1.8;
+      padding-top: 47px;
+      padding-right: 0;
+      max-width: 463px;
+    }
+
+    &__text-item {
+      line-height: 1.9;
+      margin-bottom: 41px;
+
+      &--lower {
+        margin-bottom: 35px;
+      }
+
+      &--grey {
+        font-size: 14px;
+        gap: 20px;
+      }
+    }
+  }
+}
+
+.background-box {
+  background-image: url('../images/milk-background-dt@1x.png');
+  background-position: left 735px;
+  background-repeat: no-repeat;
+  background-size: 100% 150px;
+
+  @media screen and (min-width: 480px) {
+    background-position: left 645px;
+    background-size: 100% 225px;
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: none;
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url('../images/milk-background-dt@1x.png');
+    background-position: left 340px;
+    background-repeat: no-repeat;
+    background-size: 100% 600px;
+  }
+
+  @media screen and (min-width: 2000px) {
+    background-position: left 220px;
+    background-size: 100% 700px;
+  }
+
+  @media screen and (min-width: 3000px) {
+    background-position: left 200px;
+    background-size: 100% 800px;
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .background-box {
+    background-image: url('../images/milk-background-mb@2x.png');
+  }
+}
